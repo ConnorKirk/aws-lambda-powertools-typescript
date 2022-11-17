@@ -32,8 +32,9 @@
   "homepage": "https://github.com/awslabs/aws-lambda-powertools-typescript/tree/master/packages/logging#readme",
   "license": "MIT",
   "type": "module",
-  "main": "./dist-cjs/index.js",
-  "types": "./dist-types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/es/index.js",
+  "types": "./lib/types/index.d.ts",
   "typedocMain": "src/index.ts",
   "devDependencies": {
     "@types/lodash.clonedeep": "^4.5.7",
@@ -67,9 +68,9 @@
   ],
   "exports": {
     ".": {
-      "types": "",
-      "import": "dist-es/index.js",
-      "require": "dist-cjs/index.cjs"
+      "types": "./lib/types/index.d.js",
+      "import": "./lib/es/index.js",
+      "require": "./lib/cjs/index.js"
     }
   }
 }
